@@ -53,10 +53,10 @@ def main():
     sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
     # Sambungkan ke server
-    sock.connect(("localhost", 8080))
+    sock.connect(("192.168.118.237", 8080))
 
     # Kunci rahasia yang digunakan untuk enkripsi dan dekripsi
-    key = b'secretkey1234567890'[:16]  # Ensure the key is exactly 16 bytes long
+    key = b'ifyoucanseeyousee'[:16]  # Ensure the key is exactly 16 bytes long
 
     # Kirim data terenkripsi
     data = "This is me, Azzam!"

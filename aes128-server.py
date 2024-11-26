@@ -52,7 +52,7 @@ def decrypt(ciphertext, key):
 server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
 # Bind the socket to a specific address and port
-server_socket.bind(('localhost', 8080))
+server_socket.bind(('192.168.118.237', 8080))
 
 # Listen for incoming connections
 server_socket.listen(5)
@@ -66,7 +66,8 @@ while True:
 
     # Receive encrypted data from the client
     encrypted_data = client_socket.recv(1024)
-    decrypted_data = decrypt(encrypted_data, b'secretkey123456')
+    print(encrypted_data)
+    decrypted_data = decrypt(encrypted_data, b'ifyoucanseeyousee')
 
     # Print decrypted data
     print(decrypted_data)
